@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet">
+    <title>To-do List</title>
+  </head>
+  <body
+    class="bg-bodycolor text-white font-sans h-screen flex px-5 py-10 justify-center"
+  >
+    <div class="w-96 relative">
+      <!-- Header -->
+      <div class="text-left md:text-center mb-6 sticky">
+        <h1 class="text-2xl font-semibold" id="today">Today</h1>
+        <p class="text-gray-500" id="today-date"></p>
+      </div>
+
+      <!-- Task List -->
+      <ul id="task-list" class="space-y-4 min-h-screen"></ul>
+
+      <!-- Add Task Button -->
+      <div
+        class="lg:bottom-8 lg:right-12 lg:transform lg:-translate-x-1/2 fixed bottom-6 right-6"
+      >
+        <button
+          id="addTaskButton"
+          class="bg-teal-500 w-20 h-20 rounded-full text-black text-3xl flex items-center justify-center pb-1.5"
+        >
+          +
+        </button>
+      </div>
+      <!-- Popup Modal -->
+      <div
+        id="popup"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div
+          class="bg-gray-800 text-white rounded-lg shadow-xl w-11/12 max-w-lg p-6"
+        >
+          <div class="mb-4">
+            <input
+              id="task-input"
+              type="text"
+              placeholder="Write your task here..."
+              class="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none"
+            />
+          </div>
+
+          <div class="flex justify-end gap-2">
+            <button
+              id="closePopup"
+              class="bg-red-700 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-800"
+            >
+              Cancel
+            </button>
+            <button
+              id="savePopup"
+              class="bg-teal-500 text-white px-5 py-2 rounded-md font-semibold hover:bg-teal-600"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
